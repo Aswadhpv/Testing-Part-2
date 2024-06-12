@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max Area Container</title>
+</head>
+<body>
+    <h1>Max Area Container Calculator</h1>
+    <form action="/calculate" method="post">
+        <label for="heights">Enter heights (comma separated):</label>
+        <input type="text" id="heights" name="heights" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result is not none %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
