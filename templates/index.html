@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Max Area Container</title>
+    <title>Container with Most Water</title>
 </head>
 <body>
-    <h1>Max Area Container Calculator</h1>
-    <form action="/calculate" method="post">
-        <label for="heights">Enter heights (comma separated):</label>
-        <input type="text" id="heights" name="heights" required>
+    <h1>Find Container with Most Water</h1>
+    <form method="post" action="/calculate">
+        <label for="heights">Enter heights (comma-separated):</label>
+        <input type="text" id="heights" name="heights" value="{{ heights }}">
         <button type="submit">Calculate</button>
     </form>
     {% if result is not none %}
-        <h2>Result: {{ result }}</h2>
+        <h2 id="result">Result: {{ result }}</h2>
+    {% elif error is not none %}
+        <h2 id="error" style="color: red;">Error: {{ error }}</h2>
     {% endif %}
 </body>
 </html>
